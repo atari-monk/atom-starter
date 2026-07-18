@@ -1,5 +1,7 @@
-- [Game Starter App with Atom Engine](atom-template.md)
-- [Publish](publish.md)
+Content
+
+- [Atom Starter Template](en/atom-template.md)
+- [Publish](en/publish.md)
 
 ---
 
