@@ -8,7 +8,7 @@ import {
   playMusicAfterGesture,
   startLoop,
 } from "atari-monk-atom-engine";
-import { createGame, updateGame, renderGame } from "./game";
+import { createGame, updateGame, renderGame } from "./game/game";
 
 const renderer = createRenderState("canvas");
 const input = createInputState();
