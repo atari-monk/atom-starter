@@ -1,8 +1,18 @@
 ## Project `atom-starter` SRS
 
-### Minimal `index.html`
+### Project
 
-- html
+- game project template
+- TypeScript
+- uses `atom-engine` library
+- tests simple game object with current engine library
+- source code for the code generator script
+
+### `index.html`
+
+Minimal index
+
+- HTML
 - en
 - utf-8
 - favicon
@@ -12,7 +22,9 @@
 - canvas
 - `src/main.ts` module
 
-### Empty black page `styles.css`
+### `styles.css`
+
+Empty black page
 
 - html, body:
   - no margins
@@ -20,7 +32,7 @@
   - black background
   - 100% height
 - canvas
-  - no display initialy
+  - not displayed initially
   - width and height 100%
 - start-overlay
   - 0.8 opacity black background
@@ -29,6 +41,6 @@
   - top left 0, fixed position
   - centered text and items
   - pointer cursor
-  - high z index
+  - high z-index
   - flex display
   - font size 2rem

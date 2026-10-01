@@ -1,37 +1,62 @@
-## Publish Instruction
+## Publish Instructions
 
-- Add `vite.config.js` to set base path for GitHub Pages
+### Initial Publish
+
+#### `atom-starter` project
+
+1. Add `vite.config.js` to configure the GitHub Pages base path:
 
 ```js
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: '/pages/project-name/',
-})
+  base: "/pages/project-name/",
+});
 ```
 
-- Build `dist`
+2. Build the project:
 
 ```sh
 pnpm build
 ```
 
-- Copy dist content to repo `pages/project-name/`
+3. Copy the contents of `dist` to `pages/project-name/` in the `pages` repository.
 
-```sh
-cp -r /source/folder/. /destination/folder/
-```
+4. Copy the `sounds` directory to `pages/project-name/sounds/`.
 
-- Copy `sounds` to repo `pages/project-name/sounds`
-
-- To automate copy add script to package.json:
+To automate the copy step, add the following script to `package.json`:
 
 ```json
-"publish": "cp -r ./dist/. ../pages/atom-starter/ && cp -r ./sounds ../pages/atom-starter/"
+"publish": "cp -r ./dist/. ../pages/atom-starter/ && cp -r ./sounds/. ../pages/atom-starter/sounds/"
 ```
 
-- Add index.md with link to page
+#### `pages` project
 
-- Trun on github pages on main/root
+1. Update the order and index files using the CLI.
+2. Enable GitHub Pages with the source set to the `main` branch and root (`/`).
+3. Commit and push the changes.
 
-- Commit
+### Normal Publish
+
+#### `atom-starter` project
+
+1. Build the project:
+
+```sh
+pnpm build
+```
+
+2. Publish the build:
+
+```sh
+pnpm run publish
+```
+
+#### `pages` project
+
+1. Update the order and index files using the CLI.
+2. Commit and push the changes.
+
+### TODO
+
+- Automate the publishing process.
